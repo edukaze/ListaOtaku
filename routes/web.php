@@ -22,5 +22,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::resource('animes', \App\Http\Controllers\AnimeController::class);
+Route::resource('generos', \App\Http\Controllers\AnimeController::class);
 
 require __DIR__.'/auth.php';
