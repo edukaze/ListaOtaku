@@ -23,6 +23,9 @@ class AnimeFactory extends Factory
     {
         return [
             //
+            'nome'=> $this->faker->word,
+            'lancamento'=> $this->faker->randomDigit,
+            'estudio'=>$this->faker->randomDigit,
         ];
     }
 }

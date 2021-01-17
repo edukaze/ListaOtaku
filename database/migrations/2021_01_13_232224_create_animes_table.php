@@ -15,9 +15,10 @@ class CreateAnimesTable extends Migration
     {
         Schema::create('animes', function (Blueprint $table) {
             $table->id();
-            $table->string('nome', 20);
-            $table->dateTimeTz('lancamento', $precision = 0);
+            $table->string('nome');
+            $table->integer('lancamento');
             $table->string('estudio')-> nullable();
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
