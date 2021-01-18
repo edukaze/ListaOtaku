@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class anime extends Model
 {
     use HasFactory;
+
+     public function generos(){
+        return $this->hasMany(genero::class);
+    } 
 }

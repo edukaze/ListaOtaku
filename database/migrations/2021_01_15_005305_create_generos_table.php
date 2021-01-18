@@ -31,6 +31,7 @@ class CreateGenerosTable extends Migration
             $table->string('esportes');
             $table->string('sobrenatural');
             $table->string('suspense');
+            $table->integer('anime_id');
             $table->timestamps();
         });
     }
