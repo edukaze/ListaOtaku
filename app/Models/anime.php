@@ -12,4 +12,8 @@ class anime extends Model
      public function generos(){
         return $this->hasMany(genero::class);
     } 
+     public function animes(){
+        return $this->belongToMany(anime::class, 'anime_generos');
+    }
+
 }

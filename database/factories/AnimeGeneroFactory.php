@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\anime;
+use App\Models\AnimeGenero;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class AnimeFactory extends Factory
+class AnimeGeneroFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = anime::class;
+    protected $model = AnimeGenero::class;
 
     /**
      * Define the model's default state.
@@ -23,9 +23,6 @@ class AnimeFactory extends Factory
     {
         return [
             //
-            'nome'=> $this->faker->word,
-            'lancamento'=> $this->faker->randomDigit,
-            'estudio'=>$this->faker->word,
         ];
     }
 }
