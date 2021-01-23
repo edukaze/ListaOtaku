@@ -19,12 +19,27 @@
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
             </div>
 
-            <!-- Email Address -->
+            <!-- Email -->
             <div class="mt-4">
                 <x-label for="email" :value="__('Email')" />
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
+
+            <!-- Anime Favorito -->
+            <div class="mt-4">
+                <x-label for="AnimeFavorito" :value="__('AnimeFavorito')" />
+
+                <x-input id="AnimeFavorito" class="block mt-1 w-full" type="text" name="AnimeFavorito" :value="old('AnimeFavorito')" required />
+            </div>
+
+            <!-- Telefone Address -->
+            <div class="mt-4">
+                <x-label for="telefone" :value="__('Telefone')" />
+
+                <x-input id="telefone" class="block mt-1 w-full" type="text" name="telefone" :value="old('telefone')" required />
+            </div>
+
 
             <!-- Password -->
             <div class="mt-4">
