@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\anime;
+use App\Models\Anime;
 use App\Models\Genero;
 use App\Models\AnimeGenero;
 use Illuminate\Database\Seeder;

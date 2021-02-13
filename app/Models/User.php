@@ -43,6 +43,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     public function animes(){
-        return $this->hasMany(anime::class);
+        return $this->hasMany(Anime::class);
+    } 
+    public function generos(){
+        return $this->hasMany(Genero::class);
     } 
 }

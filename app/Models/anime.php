@@ -5,15 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class anime extends Model
+class Anime extends Model
 {
     use HasFactory;
 
-     public function generos(){
-        return $this->hasMany(genero::class);
-    } 
+
+protected $fillable = [
+        'nome',
+        'estudio',
+        'user_id'
+    ];
+  
      public function animes(){
-        return $this->belongToMany(anime::class, 'anime_generos');
+        return $this->belongToMany(Anime::class, 'anime_generos');
     }
 
 }

@@ -2,9 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\genero;
-use App\Models\anime;
+use App\Models\Genero;
+use App\Models\Anime;
+use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Collection;
 
 class GeneroSeeder extends Seeder
 {
