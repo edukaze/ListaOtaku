@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class AnimeGenero extends Model
 {
     use HasFactory;
+    
 }

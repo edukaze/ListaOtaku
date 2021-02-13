@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Auth;
 
 class AnimeController extends Controller
 {
+
+
+    public  function list(){
+        return auth()->user->produtos;
+    }
     /**
      * Display a listing of the resource.
      *
