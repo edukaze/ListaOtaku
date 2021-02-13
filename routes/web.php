@@ -28,4 +28,6 @@ Route::resource('generos', \App\Http\Controllers\AnimeController::class);
 
 Route::Post('/novo/anime', [AnimeController::class, 'store'])->name('novo-anime');
 
+Route::get('/spa', [SPAController::class, 'home']);
+
 require __DIR__.'/auth.php';
