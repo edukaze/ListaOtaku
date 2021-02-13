@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-use App\Http\Controllers\HomeController;
+use \App\Http\Controllers\HomeController;
+use \App\Http\Controllers\AnimeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,5 +24,7 @@ Route::get('/dashboard', [HomeController::class, 'dashboard'])->middleware(['aut
 
 Route::resource('animes', \App\Http\Controllers\AnimeController::class);
 Route::resource('generos', \App\Http\Controllers\AnimeController::class);
+
+Route::Post('/novo/anime', [AnimeController::class, 'store'])->name('novo-anime');
 
 require __DIR__.'/auth.php';
