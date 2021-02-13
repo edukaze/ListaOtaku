@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\anime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AnimeController extends Controller
 {
@@ -35,7 +36,13 @@ class AnimeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        anime::create([
+            'nome'=> $request->nome,
+            'estudio'=> $request->estudio,
+            'user_id' =>Auth::user()->id,
+
+        ]);
+        return redirect('dashboard');
     }
 
     /**

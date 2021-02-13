@@ -17,7 +17,7 @@ class AnimeGeneroSeeder extends Seeder
     public function run()
     {
         foreach (anime::all() as $anime) {
-       	$generos = genero::all()->where('user_id', $anime->userid)->random(1);
+       	$generos = genero::all()->where('user_id', $anime->user_id)->random(1);
        		foreach ($generos as $genero) {
        			AnimeGenero::create([
        				'anime_id'=> $anime->id,

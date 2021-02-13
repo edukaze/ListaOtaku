@@ -15,23 +15,9 @@ class CreateGenerosTable extends Migration
     {
         Schema::create('generos', function (Blueprint $table) {
             $table->id();
-            $table->string('acao');
-            $table->string('aventura');
-            $table->string('comedia');
-            $table->string('drama');
-            $table->string('fantasia');
-            $table->string('ecchi');
-            $table->string('musical');
-            $table->string('romance');
-            $table->string('ficcao_cientifica');
-            $table->string('seinen');
-            $table->string('shoujo');
-            $table->string('shounen');
-            $table->string('slife-of-slife');
-            $table->string('esportes');
-            $table->string('sobrenatural');
-            $table->string('suspense');
+            $table->string('genero');
             $table->integer('anime_id');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

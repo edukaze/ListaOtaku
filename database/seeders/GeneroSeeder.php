@@ -18,27 +18,16 @@ class GeneroSeeder extends Seeder
     public function run()
     {
         //
+
         foreach (anime::all() as $anime) {
-        	
-	        Genero::create([
-	        	'anime_id'=> $anime->id,
-	        	'acao'=> 'ação',
-	        	'aventura' => 'aventura',
-	        	'comedia' => 'comedia',
-	        	'drama'=> 'drama',
-	        	'fantasia'=> 'fantasia',
-	        	'ecchi'=> 'ecchi',
-	        	'musical' => 'musical',
-	        	'romance'=> 'romance',
-	        	'ficcao_cientifica' => 'ficcão cientifica',
-	        	'seinen'=> 'seinen,',
-	        	'shoujo' => 'shoujo',
-	        	'shounen'=> 'shounen',
-	        	'slife-of-slife'=> 'slife-of-slife',
-	        	'esportes'=> 'esportes',
-	        	'sobrenatural'=> 'sobrenatural',
-	        	'suspense'=> 'suspense'
+        	$generos = collect(['ação', 'aventura', 'comedia', 'drama', 'fantasia', 'echhi', 'musical', 'romance', 'ficção cientifica', 'seinen', 'shoujo', 'shounen', 'slife of life', 'esportes', 'sobrenatural', 'suspense'])->random(3);
+        	foreach ($generos as $genero) {
+	        	Genero::create([
+	    			'genero'=> $genero,
+	    			'anime_id'=>$anime->id,
+                    'user_id' => $anime->user_id,
 	        ]);
+        	}
         }
     }
 }
