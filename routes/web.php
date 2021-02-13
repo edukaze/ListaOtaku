@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 use \App\Http\Controllers\HomeController;
 use \App\Http\Controllers\AnimeController;
+use \App\Http\Controllers\SPAController;
 
 Route::get('/', function () {
     return view('welcome');
